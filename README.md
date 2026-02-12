@@ -1,11 +1,12 @@
-# ECA Landing Page
+# ECA Landing Page - F2G-SOLUTIONS
 
-Production-ready landing page for Extended Cellular Analyzer (ECA).
+Professional landing page for Extended Cellular Analyzer (ECA) by F2G-SOLUTIONS.
 
 ## 🚀 Features
 
 - **Modern Stack**: Next.js 14, React 18, TypeScript, Tailwind CSS
 - **Fully Responsive**: Mobile-first design with optimized layouts
+- **Dark Mode**: Toggle between light and dark themes
 - **SEO Optimized**: Meta tags, Open Graph, structured data
 - **Performance**: Static export, optimized images, lazy loading
 - **Accessible**: WCAG 2.1 AA compliant
@@ -41,12 +42,12 @@ npm run export
 
 ## 🎯 Key Highlights
 
-- Professional design matching ECA's brand
+- Professional design matching F2G-SOLUTIONS brand
 - Conversion-optimized CTAs
 - Trust signals and social proof
 - Mobile-responsive navigation
 - Smooth animations and transitions
-- Dark mode ready (optional)
+- Dark mode support
 
 ## 📝 Customization
 
@@ -66,14 +67,6 @@ Add screenshots and logos to `public/` directory and update references.
 - **Styling**: Tailwind CSS
 - **Icons**: Lucide React
 - **Utilities**: clsx, tailwind-merge
-
-## 📊 Analytics
-
-To add analytics, include tracking scripts in `_document.tsx`:
-
-```tsx
-<Script src="https://analytics.example.com/script.js" />
-```
 
 ## 🚢 Deployment
 
@@ -96,12 +89,12 @@ npm run export
 
 ## 📄 License
 
-MIT License - Same as ECA project
+Proprietary - F2G-SOLUTIONS
 
-## 🤝 Contributing
+## 🏢 Company
 
-Contributions welcome! Please open an issue or PR.
+Built by F2G-SOLUTIONS for professional cellular network analysis.
 
 ---
 
-Built with ❤️ for the ECA community
+© 2024 F2G-SOLUTIONS. All rights reserved.

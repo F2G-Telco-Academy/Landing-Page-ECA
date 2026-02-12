@@ -61,7 +61,7 @@ const useCases = [
 
 export default function UseCases() {
   return (
-    <section id="use-cases" className="py-24 bg-white">
+    <section id="use-cases" className="py-24 bg-white dark:bg-gray-900">
       <Container>
         {/* Section header */}
         <div className="text-center mb-16 space-y-4">
@@ -69,7 +69,7 @@ export default function UseCases() {
             Built for
             <span className="gradient-text block mt-2">Telecom Professionals</span>
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
             Whether you're optimizing networks, researching protocols, or developing devices, 
             ECA adapts to your workflow.
           </p>
@@ -86,10 +86,10 @@ export default function UseCases() {
                     <useCase.icon className={`w-6 h-6 ${useCase.color}`} />
                   </div>
                   <div className="flex-1">
-                    <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                    <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
                       {useCase.title}
                     </h3>
-                    <p className="text-gray-600 text-sm">
+                    <p className="text-gray-600 dark:text-gray-300 text-sm">
                       {useCase.description}
                     </p>
                   </div>
@@ -98,7 +98,7 @@ export default function UseCases() {
                 {/* Features list */}
                 <ul className="space-y-2 pl-16">
                   {useCase.features.map((feature, featureIdx) => (
-                    <li key={featureIdx} className="flex items-start gap-2 text-sm text-gray-700">
+                    <li key={featureIdx} className="flex items-start gap-2 text-sm text-gray-700 dark:text-gray-300">
                       <span className={`mt-1.5 w-1.5 h-1.5 rounded-full ${useCase.color.replace('text', 'bg')} flex-shrink-0`} />
                       <span>{feature}</span>
                     </li>

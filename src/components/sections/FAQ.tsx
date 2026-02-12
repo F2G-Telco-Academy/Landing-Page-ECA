@@ -12,7 +12,7 @@ const faqs = [
   },
   {
     question: 'Is ECA really free?',
-    answer: 'Yes! ECA is 100% free and open source under the MIT license. There are no hidden fees, subscriptions, or premium tiers. All features are available to everyone.',
+    answer: 'ECA is a professional solution by F2G-SOLUTIONS. Contact us for pricing and licensing options tailored to your organization.',
   },
   {
     question: 'What networks does it support?',
@@ -24,7 +24,7 @@ const faqs = [
   },
   {
     question: 'Can I use ECA for commercial projects?',
-    answer: 'Absolutely! The MIT license allows commercial use without restrictions. Many RF consultants and network operators use ECA for professional drive testing and optimization projects.',
+    answer: 'Yes! ECA is designed for professional and commercial use. Contact F2G-SOLUTIONS for enterprise licensing and support options.',
   },
   {
     question: 'How is data stored?',
@@ -44,7 +44,7 @@ const faqs = [
   },
   {
     question: 'How do I report bugs or request features?',
-    answer: 'Use the built-in bug report button (🐛) in the app, or open an issue on GitHub. We actively maintain the project and welcome community contributions.',
+    answer: 'Contact F2G-SOLUTIONS support team directly. We provide professional support and actively maintain the product with regular updates.',
   },
 ]
 
@@ -52,15 +52,15 @@ function FAQItem({ question, answer }: { question: string; answer: string }) {
   const [isOpen, setIsOpen] = useState(false)
 
   return (
-    <div className="border border-gray-200 rounded-lg overflow-hidden">
+    <div className="border border-gray-200 dark:border-gray-700 rounded-lg overflow-hidden">
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="w-full px-6 py-4 text-left flex items-center justify-between gap-4 hover:bg-gray-50 transition-colors"
+        className="w-full px-6 py-4 text-left flex items-center justify-between gap-4 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors"
       >
-        <span className="font-semibold text-gray-900">{question}</span>
+        <span className="font-semibold text-gray-900 dark:text-white">{question}</span>
         <ChevronDown
           className={cn(
-            'w-5 h-5 text-gray-500 flex-shrink-0 transition-transform duration-200',
+            'w-5 h-5 text-gray-500 dark:text-gray-400 flex-shrink-0 transition-transform duration-200',
             isOpen && 'rotate-180'
           )}
         />
@@ -71,7 +71,7 @@ function FAQItem({ question, answer }: { question: string; answer: string }) {
           isOpen ? 'max-h-96' : 'max-h-0'
         )}
       >
-        <div className="px-6 py-4 bg-gray-50 text-gray-600 text-sm leading-relaxed border-t border-gray-200">
+        <div className="px-6 py-4 bg-gray-50 dark:bg-gray-800 text-gray-600 dark:text-gray-300 text-sm leading-relaxed border-t border-gray-200 dark:border-gray-700">
           {answer}
         </div>
       </div>
@@ -81,7 +81,7 @@ function FAQItem({ question, answer }: { question: string; answer: string }) {
 
 export default function FAQ() {
   return (
-    <section id="faq" className="py-24 bg-white">
+    <section id="faq" className="py-24 bg-white dark:bg-gray-900">
       <Container>
         {/* Section header */}
         <div className="text-center mb-16 space-y-4">
@@ -89,7 +89,7 @@ export default function FAQ() {
             Frequently Asked
             <span className="gradient-text block mt-2">Questions</span>
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
             Everything you need to know about ECA
           </p>
         </div>
@@ -103,9 +103,9 @@ export default function FAQ() {
 
         {/* Bottom CTA */}
         <div className="mt-12 text-center">
-          <p className="text-gray-600 mb-4">Still have questions?</p>
-          <button className="text-primary-600 hover:text-primary-700 font-medium">
-            Join our community on GitHub Discussions →
+          <p className="text-gray-600 dark:text-gray-400 mb-4">Still have questions?</p>
+          <button className="text-primary-600 hover:text-primary-700 font-medium" onClick={() => window.location.href = '#contact'}>
+            Contact F2G-SOLUTIONS →
           </button>
         </div>
       </Container>

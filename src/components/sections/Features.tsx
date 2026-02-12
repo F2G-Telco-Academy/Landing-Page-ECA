@@ -87,8 +87,8 @@ const features = [
   },
   {
     icon: Lock,
-    title: 'Offline First',
-    description: 'Desktop application - your data stays local. No cloud dependencies, no subscriptions, no data sharing.',
+    title: 'Enterprise Security',
+    description: 'Desktop application with enterprise-grade security. Your data stays local and secure with professional support.',
     color: 'text-gray-700',
     bgColor: 'bg-gray-50',
   },
@@ -96,7 +96,7 @@ const features = [
 
 export default function Features() {
   return (
-    <section id="features" className="py-24 bg-gray-50">
+    <section id="features" className="py-24 bg-gray-50 dark:bg-gray-800">
       <Container>
         {/* Section header */}
         <div className="text-center mb-16 space-y-4">
@@ -104,7 +104,7 @@ export default function Features() {
             Everything You Need for
             <span className="gradient-text block mt-2">Professional Network Analysis</span>
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
             From real-time monitoring to offline analysis, ECA provides all the tools RF engineers need 
             for comprehensive cellular network testing and troubleshooting.
           </p>
@@ -122,10 +122,10 @@ export default function Features() {
 
                 {/* Content */}
                 <div className="space-y-2">
-                  <h3 className="text-lg font-semibold text-gray-900">
+                  <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
                     {feature.title}
                   </h3>
-                  <p className="text-gray-600 text-sm leading-relaxed">
+                  <p className="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">
                     {feature.description}
                   </p>
                 </div>
@@ -136,7 +136,7 @@ export default function Features() {
 
         {/* Bottom CTA */}
         <div className="mt-16 text-center">
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-white rounded-full shadow-md text-sm text-gray-700">
+          <div className="inline-flex items-center gap-2 px-4 py-2 bg-white dark:bg-gray-700 rounded-full shadow-md text-sm text-gray-700 dark:text-gray-300">
             <span className="font-semibold">And much more...</span>
             <span className="text-gray-400">→</span>
             <span>Check out the full documentation</span>

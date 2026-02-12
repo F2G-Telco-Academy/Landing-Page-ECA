@@ -1,6 +1,6 @@
 'use client'
 
-import { Github, Twitter, Mail, Heart } from 'lucide-react'
+import { Twitter, Mail, Heart, Linkedin } from 'lucide-react'
 import Container from '../ui/Container'
 
 const footerLinks = {
@@ -17,29 +17,29 @@ const footerLinks = {
     { name: 'Release Notes', href: '#' },
   ],
   community: [
-    { name: 'GitHub', href: 'https://github.com' },
-    { name: 'Discussions', href: '#' },
-    { name: 'Issue Tracker', href: '#' },
-    { name: 'Contributing', href: '#' },
+    { name: 'LinkedIn', href: 'https://linkedin.com' },
+    { name: 'Contact Us', href: '#contact' },
+    { name: 'Support', href: '#contact' },
+    { name: 'About F2G', href: '#' },
   ],
   legal: [
-    { name: 'License (MIT)', href: '#' },
     { name: 'Privacy Policy', href: '#' },
     { name: 'Terms of Use', href: '#' },
+    { name: 'Contact', href: '#contact' },
   ],
 }
 
 const socialLinks = [
-  { name: 'GitHub', icon: Github, href: 'https://github.com' },
+  { name: 'LinkedIn', icon: Linkedin, href: 'https://linkedin.com' },
   { name: 'Twitter', icon: Twitter, href: 'https://twitter.com' },
-  { name: 'Email', icon: Mail, href: 'mailto:contact@eca-analyzer.dev' },
+  { name: 'Email', icon: Mail, href: 'mailto:contact@f2g-solutions.com' },
 ]
 
 export default function Footer() {
   const currentYear = new Date().getFullYear()
 
   return (
-    <footer className="bg-gray-900 text-white">
+    <footer className="bg-gray-900 dark:bg-black text-white">>
       <Container>
         {/* Main footer content */}
         <div className="py-12 grid grid-cols-2 md:grid-cols-4 gap-8">
@@ -122,7 +122,7 @@ export default function Footer() {
               📡
             </div>
             <div className="text-sm text-gray-400">
-              © {currentYear} ECA. All rights reserved.
+              © {currentYear} F2G-SOLUTIONS. All rights reserved.
             </div>
           </div>
 

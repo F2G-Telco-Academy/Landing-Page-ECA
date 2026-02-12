@@ -1,16 +1,15 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import { Download, Menu, X } from 'lucide-react'
-import Button from '../ui/Button'
+import { Menu, X } from 'lucide-react'
 import { cn } from '@/lib/utils'
+import ThemeToggle from '../ui/ThemeToggle'
 
 const navigation = [
   { name: 'Features', href: '#features' },
   { name: 'How It Works', href: '#how-it-works' },
   { name: 'Use Cases', href: '#use-cases' },
   { name: 'FAQ', href: '#faq' },
-  { name: 'GitHub', href: 'https://github.com', external: true },
 ]
 
 export default function Header() {
@@ -30,7 +29,7 @@ export default function Header() {
       className={cn(
         'fixed top-0 left-0 right-0 z-50 transition-all duration-300',
         isScrolled
-          ? 'bg-white/95 backdrop-blur-md shadow-md'
+          ? 'bg-white/95 dark:bg-gray-900/95 backdrop-blur-md shadow-md'
           : 'bg-transparent'
       )}
     >
@@ -42,8 +41,8 @@ export default function Header() {
               📡
             </div>
             <div>
-              <div className="font-bold text-xl text-gray-900">ECA</div>
-              <div className="text-xs text-gray-500 hidden sm:block">Extended Cellular Analyzer</div>
+              <div className="font-bold text-xl text-gray-900 dark:text-white">ECA</div>
+              <div className="text-xs text-gray-500 dark:text-gray-400 hidden sm:block">Extended Cellular Analyzer</div>
             </div>
           </div>
 
@@ -55,7 +54,7 @@ export default function Header() {
                 href={item.href}
                 target={item.external ? '_blank' : undefined}
                 rel={item.external ? 'noopener noreferrer' : undefined}
-                className="text-gray-700 hover:text-primary-600 font-medium transition-colors"
+                className="text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 font-medium transition-colors"
               >
                 {item.name}
               </a>
@@ -64,21 +63,18 @@ export default function Header() {
 
           {/* Desktop CTA */}
           <div className="hidden lg:flex items-center gap-4">
-            <Button size="sm" className="gap-2">
-              <Download className="w-4 h-4" />
-              Download
-            </Button>
+            <ThemeToggle />
           </div>
 
           {/* Mobile menu button */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="lg:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors"
+            className="lg:hidden p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
           >
             {isMobileMenuOpen ? (
-              <X className="w-6 h-6 text-gray-900" />
+              <X className="w-6 h-6 text-gray-900 dark:text-white" />
             ) : (
-              <Menu className="w-6 h-6 text-gray-900" />
+              <Menu className="w-6 h-6 text-gray-900 dark:text-white" />
             )}
           </button>
         </div>
@@ -87,7 +83,7 @@ export default function Header() {
       {/* Mobile Navigation */}
       <div
         className={cn(
-          'lg:hidden absolute top-full left-0 right-0 bg-white border-b border-gray-200 shadow-lg transition-all duration-300 overflow-hidden',
+          'lg:hidden absolute top-full left-0 right-0 bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-700 shadow-lg transition-all duration-300 overflow-hidden',
           isMobileMenuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
         )}
       >
@@ -96,19 +92,14 @@ export default function Header() {
             <a
               key={item.name}
               href={item.href}
-              target={item.external ? '_blank' : undefined}
-              rel={item.external ? 'noopener noreferrer' : undefined}
               onClick={() => setIsMobileMenuOpen(false)}
-              className="block px-4 py-3 rounded-lg text-gray-700 hover:bg-gray-100 font-medium transition-colors"
+              className="block px-4 py-3 rounded-lg text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 font-medium transition-colors"
             >
               {item.name}
             </a>
           ))}
-          <div className="pt-2">
-            <Button className="w-full gap-2">
-              <Download className="w-4 h-4" />
-              Download
-            </Button>
+          <div className="pt-2 flex justify-center">
+            <ThemeToggle />
           </div>
         </nav>
       </div>

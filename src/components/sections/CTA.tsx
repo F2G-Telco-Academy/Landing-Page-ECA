@@ -1,6 +1,6 @@
 'use client'
 
-import { Download, Github, BookOpen, MessageCircle } from 'lucide-react'
+import { PlayCircle, BookOpen, MessageCircle } from 'lucide-react'
 import Button from '../ui/Button'
 import Container from '../ui/Container'
 
@@ -21,31 +21,31 @@ export default function CTA() {
             </h2>
             <p className="text-xl text-blue-100 max-w-2xl mx-auto">
               Join hundreds of RF engineers already using ECA for professional cellular network testing.
-              Free, open source, and production ready.
+              Contact F2G-SOLUTIONS for a demo.
             </p>
           </div>
 
           {/* CTA buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-4">
-            <Button size="lg" className="bg-white text-primary-600 hover:bg-gray-100 shadow-xl gap-2 min-w-[200px]">
-              <Download className="w-5 h-5" />
-              Download for Windows
+            <Button size="lg" className="bg-white text-primary-600 hover:bg-gray-100 shadow-xl gap-2 min-w-[200px]" onClick={() => window.location.href = '#contact'}>
+              <PlayCircle className="w-5 h-5" />
+              Request Demo
             </Button>
-            <Button size="lg" variant="outline" className="border-2 border-white text-white hover:bg-white/10 gap-2 min-w-[200px]">
-              <Github className="w-5 h-5" />
-              View on GitHub
+            <Button size="lg" variant="outline" className="border-2 border-white text-white hover:bg-white/10 gap-2 min-w-[200px]" onClick={() => window.location.href = '#features'}>
+              <MessageCircle className="w-5 h-5" />
+              Contact Us
             </Button>
           </div>
 
           {/* Quick links */}
           <div className="grid md:grid-cols-2 gap-4 pt-8 max-w-2xl mx-auto">
-            <a href="#" className="flex items-center justify-center gap-2 px-4 py-3 bg-white/10 backdrop-blur-sm rounded-lg hover:bg-white/20 transition-all duration-200 border border-white/20">
+            <a href="#features" className="flex items-center justify-center gap-2 px-4 py-3 bg-white/10 backdrop-blur-sm rounded-lg hover:bg-white/20 transition-all duration-200 border border-white/20">
               <BookOpen className="w-4 h-4" />
-              <span className="text-sm font-medium">Documentation</span>
+              <span className="text-sm font-medium">Learn More</span>
             </a>
-            <a href="#" className="flex items-center justify-center gap-2 px-4 py-3 bg-white/10 backdrop-blur-sm rounded-lg hover:bg-white/20 transition-all duration-200 border border-white/20">
+            <a href="#contact" className="flex items-center justify-center gap-2 px-4 py-3 bg-white/10 backdrop-blur-sm rounded-lg hover:bg-white/20 transition-all duration-200 border border-white/20">
               <MessageCircle className="w-4 h-4" />
-              <span className="text-sm font-medium">Community Support</span>
+              <span className="text-sm font-medium">Contact Support</span>
             </a>
           </div>
 
@@ -60,8 +60,8 @@ export default function CTA() {
               <div className="text-sm text-blue-100">Contributors</div>
             </div>
             <div>
-              <div className="text-3xl font-bold mb-1">MIT</div>
-              <div className="text-sm text-blue-100">License</div>
+              <div className="text-3xl font-bold mb-1">F2G</div>
+              <div className="text-sm text-blue-100">Solutions</div>
             </div>
           </div>
 

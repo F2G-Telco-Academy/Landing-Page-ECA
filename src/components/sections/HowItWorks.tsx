@@ -36,7 +36,7 @@ const steps = [
 
 export default function HowItWorks() {
   return (
-    <section id="how-it-works" className="py-24 bg-white">
+    <section id="how-it-works" className="py-24 bg-white dark:bg-gray-900">
       <Container>
         {/* Section header */}
         <div className="text-center mb-16 space-y-4">
@@ -44,7 +44,7 @@ export default function HowItWorks() {
             Get Started in
             <span className="gradient-text block mt-2">4 Simple Steps</span>
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
             From installation to analysis - ECA is designed for quick setup and intuitive workflow.
           </p>
         </div>
@@ -52,13 +52,13 @@ export default function HowItWorks() {
         {/* Steps */}
         <div className="relative">
           {/* Connection line */}
-          <div className="hidden lg:block absolute top-1/2 left-0 right-0 h-1 bg-gradient-to-r from-blue-200 via-purple-200 to-green-200 -translate-y-1/2 -z-10" />
+          <div className="hidden lg:block absolute top-1/2 left-0 right-0 h-1 bg-gradient-to-r from-blue-200 via-purple-200 to-green-200 dark:from-blue-900 dark:via-purple-900 dark:to-green-900 -translate-y-1/2 -z-10" />
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {steps.map((step, idx) => (
               <div key={idx} className="relative">
                 {/* Step card */}
-                <div className="bg-white rounded-xl p-6 border-2 border-gray-200 hover:border-primary-300 hover:shadow-lg transition-all duration-300 group">
+                <div className="bg-white dark:bg-gray-800 rounded-xl p-6 border-2 border-gray-200 dark:border-gray-700 hover:border-primary-300 dark:hover:border-primary-600 hover:shadow-lg transition-all duration-300 group">
                   {/* Step number */}
                   <div className={`absolute -top-4 left-6 px-3 py-1 rounded-full bg-gradient-to-r ${step.color} text-white text-sm font-bold shadow-lg`}>
                     {step.number}
@@ -71,10 +71,10 @@ export default function HowItWorks() {
 
                   {/* Content */}
                   <div className="space-y-2">
-                    <h3 className="text-lg font-semibold text-gray-900">
+                    <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
                       {step.title}
                     </h3>
-                    <p className="text-gray-600 text-sm leading-relaxed">
+                    <p className="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">
                       {step.description}
                     </p>
                   </div>
@@ -86,7 +86,7 @@ export default function HowItWorks() {
 
         {/* Bottom note */}
         <div className="mt-12 text-center">
-          <p className="text-gray-500 text-sm">
+          <p className="text-gray-500 dark:text-gray-400 text-sm">
             ⚡ Average setup time: <span className="font-semibold text-gray-700">Less than 5 minutes</span>
           </p>
         </div>

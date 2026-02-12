@@ -14,35 +14,35 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>ECA - Extended Cellular Analyzer | Professional Network Analysis Tool</title>
+        <title>ECA - Extended Cellular Analyzer | F2G-SOLUTIONS</title>
         <meta
           name="description"
-          content="Free, open-source cellular network analysis tool for RF engineers. Real-time LTE, 5G NR, WCDMA monitoring with GPS mapping, KPI extraction, and protocol debugging."
+          content="Professional cellular network analysis tool by F2G-SOLUTIONS. Real-time LTE, 5G NR, WCDMA monitoring with GPS mapping, KPI extraction, and protocol debugging."
         />
         <meta
           name="keywords"
-          content="cellular analyzer, network testing, drive testing, 5G analysis, LTE monitoring, RF engineering, QXDM alternative, network KPI, protocol analyzer"
+          content="cellular analyzer, network testing, drive testing, 5G analysis, LTE monitoring, RF engineering, network KPI, protocol analyzer, F2G-SOLUTIONS"
         />
-        <meta name="author" content="ECA Team" />
+        <meta name="author" content="F2G-SOLUTIONS" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         
         {/* Open Graph / Facebook */}
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://eca-analyzer.dev/" />
-        <meta property="og:title" content="ECA - Extended Cellular Analyzer | Professional Network Analysis" />
+        <meta property="og:url" content="https://f2g-solutions.com/" />
+        <meta property="og:title" content="ECA - Extended Cellular Analyzer | F2G-SOLUTIONS" />
         <meta
           property="og:description"
-          content="Free, open-source cellular network analysis tool for RF engineers. Real-time monitoring, GPS mapping, and 90+ KPIs."
+          content="Professional cellular network analysis tool by F2G-SOLUTIONS. Real-time monitoring, GPS mapping, and 90+ KPIs."
         />
         <meta property="og:image" content="/og-image.png" />
 
         {/* Twitter */}
         <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:url" content="https://eca-analyzer.dev/" />
-        <meta property="twitter:title" content="ECA - Extended Cellular Analyzer" />
+        <meta property="twitter:url" content="https://f2g-solutions.com/" />
+        <meta property="twitter:title" content="ECA - Extended Cellular Analyzer | F2G-SOLUTIONS" />
         <meta
           property="twitter:description"
-          content="Free, open-source cellular network analysis tool for RF engineers."
+          content="Professional cellular network analysis tool by F2G-SOLUTIONS."
         />
         <meta property="twitter:image" content="/og-image.png" />
 
