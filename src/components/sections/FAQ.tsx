@@ -81,7 +81,7 @@ function FAQItem({ question, answer }: { question: string; answer: string }) {
 
 export default function FAQ() {
   return (
-    <section id="faq" className="py-24 bg-white dark:bg-gray-900">
+    <section id="faq" className="py-24 bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-800">
       <Container>
         {/* Section header */}
         <div className="text-center mb-16 space-y-4">

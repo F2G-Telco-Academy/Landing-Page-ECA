@@ -11,6 +11,7 @@ const navigation = [
   { name: 'How It Works', href: '#how-it-works' },
   { name: 'Use Cases', href: '#use-cases' },
   { name: 'FAQ', href: '#faq' },
+  { name: 'Contact', href: '#contact' },
 ]
 
 export default function Header() {

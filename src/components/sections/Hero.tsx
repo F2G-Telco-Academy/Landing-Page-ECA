@@ -1,11 +1,15 @@
 'use client'
 
+import { useState } from 'react'
 import { PlayCircle } from 'lucide-react'
 import Image from 'next/image'
 import Button from '../ui/Button'
 import Container from '../ui/Container'
+import VideoModal from '../ui/VideoModal'
 
 export default function Hero() {
+  const [isVideoOpen, setIsVideoOpen] = useState(false)
+
   return (
     <section className="relative pt-32 pb-20 overflow-hidden">
       {/* Animated background gradient */}
@@ -34,7 +38,7 @@ export default function Hero() {
                 <span className="gradient-text block mt-2">Made Simple</span>
               </h1>
               <p className="text-xl text-gray-600 dark:text-gray-300 leading-relaxed">
-                Real-time LTE, 5G NR, and WCDMA monitoring and analysis. Drive testing, 
+                Real-time LTE, 5G NR, WCDMA, and GSM monitoring and analysis. Drive testing, 
                 KPI extraction, and protocol debugging - powered by F2G-SOLUTIONS.
               </p>
             </div>
@@ -61,7 +65,7 @@ export default function Hero() {
 
             {/* CTA buttons */}
             <div className="flex flex-wrap gap-4">
-              <Button size="lg" className="gap-2" onClick={() => window.location.href = '#contact'}>
+              <Button size="lg" className="gap-2" onClick={() => setIsVideoOpen(true)}>
                 <PlayCircle className="w-5 h-5" />
                 Request Demo
               </Button>
@@ -73,11 +77,11 @@ export default function Hero() {
             {/* Stats */}
             <div className="grid grid-cols-3 gap-6 pt-8 border-t border-gray-200 dark:border-gray-700">
               <div>
-                <div className="text-3xl font-bold text-primary-600">90+</div>
+                <div className="text-3xl font-bold text-primary-600">50+</div>
                 <div className="text-sm text-gray-600 dark:text-gray-400">KPIs Tracked</div>
               </div>
               <div>
-                <div className="text-3xl font-bold text-primary-600">3</div>
+                <div className="text-3xl font-bold text-primary-600">4</div>
                 <div className="text-sm text-gray-600 dark:text-gray-400">Technologies</div>
               </div>
               <div>
@@ -117,6 +121,8 @@ export default function Hero() {
           </div>
         </div>
       </Container>
+
+      <VideoModal isOpen={isVideoOpen} onClose={() => setIsVideoOpen(false)} />
     </section>
   )
 }

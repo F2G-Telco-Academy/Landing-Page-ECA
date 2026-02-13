@@ -1,7 +1,9 @@
 'use client'
 
+import { useState } from 'react'
 import { Check, X } from 'lucide-react'
 import Container from '../ui/Container'
+import VideoModal from '../ui/VideoModal'
 
 const features = [
   { name: 'Real-time capture', eca: true, qxdm: true, xcal: true },
@@ -16,8 +18,10 @@ const features = [
 ]
 
 export default function Comparison() {
+  const [isVideoOpen, setIsVideoOpen] = useState(false)
+
   return (
-    <section className="py-24 bg-gray-50 dark:bg-gray-800">
+    <section className="py-24 bg-gray-50 dark:bg-gray-800 border-t border-gray-200 dark:border-gray-800">
       <Container>
         {/* Section header */}
         <div className="text-center mb-16 space-y-4">
@@ -104,10 +108,10 @@ export default function Comparison() {
             <div className="flex flex-col md:flex-row items-center justify-between gap-4">
               <div>
                 <div className="font-semibold text-gray-900 dark:text-white mb-1">Ready to try F2G ECA?</div>
-                <div className="text-sm text-gray-600 dark:text-gray-300">Contact us for a demo</div>
+                <div className="text-sm text-gray-600 dark:text-gray-300">Watch our demo video</div>
               </div>
-              <button className="px-6 py-2.5 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors font-medium" onClick={() => window.location.href = '#contact'}>
-                Request Demo
+              <button className="px-6 py-2.5 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors font-medium" onClick={() => setIsVideoOpen(true)}>
+                Watch Demo
               </button>
             </div>
           </div>
@@ -118,6 +122,8 @@ export default function Comparison() {
           * Comparison based on publicly available information. Feature availability may vary by version.
         </p>
       </Container>
+
+      <VideoModal isOpen={isVideoOpen} onClose={() => setIsVideoOpen(false)} />
     </section>
   )
 }

@@ -1,10 +1,14 @@
 'use client'
 
+import { useState } from 'react'
 import { PlayCircle, BookOpen, MessageCircle } from 'lucide-react'
 import Button from '../ui/Button'
 import Container from '../ui/Container'
+import VideoModal from '../ui/VideoModal'
 
 export default function CTA() {
+  const [isVideoOpen, setIsVideoOpen] = useState(false)
+
   return (
     <section className="py-24 bg-gradient-to-br from-primary-600 via-blue-600 to-primary-700 text-white relative overflow-hidden">
       {/* Background pattern */}
@@ -21,15 +25,15 @@ export default function CTA() {
             </h2>
             <p className="text-xl text-blue-100 max-w-2xl mx-auto">
               Join hundreds of RF engineers already using ECA for professional cellular network testing.
-              Contact F2G-SOLUTIONS for a demo.
+              Watch our demo to see ECA in action.
             </p>
           </div>
 
           {/* CTA buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-4">
-            <Button size="lg" className="bg-white text-primary-600 hover:bg-gray-100 shadow-xl gap-2 min-w-[200px]" onClick={() => window.location.href = '#contact'}>
+            <Button size="lg" className="bg-white text-primary-600 hover:bg-gray-100 shadow-xl gap-2 min-w-[200px]" onClick={() => setIsVideoOpen(true)}>
               <PlayCircle className="w-5 h-5" />
-              Request Demo
+              Watch Demo
             </Button>
             <Button size="lg" variant="outline" className="border-2 border-white text-white hover:bg-white/10 gap-2 min-w-[200px]" onClick={() => window.location.href = '#features'}>
               <MessageCircle className="w-5 h-5" />
@@ -71,6 +75,8 @@ export default function CTA() {
           </p>
         </div>
       </Container>
+
+      <VideoModal isOpen={isVideoOpen} onClose={() => setIsVideoOpen(false)} />
     </section>
   )
 }
