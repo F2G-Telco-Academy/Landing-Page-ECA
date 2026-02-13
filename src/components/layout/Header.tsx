@@ -34,12 +34,10 @@ export default function Header() {
             : 'bg-gradient-to-b from-white to-nav-gradient-end border border-card-border'
         )}
       >
-        {/* Logo */}
+        {/* Logo — square with slight rounding, not circle */}
         <div className="flex items-center gap-2.5">
-          <div className="w-8 h-8 rounded-full overflow-hidden">
-            <Image src="/f2g_logo.png" alt="F2G Logo" width={32} height={32} className="object-contain" />
-          </div>
-          <span className="font-medium text-sm text-primary">ECA</span>
+          <Image src="/f2g_logo.png" alt="F2G" width={28} height={28} className="rounded-md" />
+          <span className="font-medium text-sm text-primary tracking-tight">ECA</span>
         </div>
 
         {/* Desktop Nav */}
@@ -67,11 +65,7 @@ export default function Header() {
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           className="lg:hidden p-2 rounded-full hover:bg-gray-100 transition-colors"
         >
-          {isMobileMenuOpen ? (
-            <X className="w-5 h-5 text-primary" />
-          ) : (
-            <Menu className="w-5 h-5 text-primary" />
-          )}
+          {isMobileMenuOpen ? <X className="w-5 h-5 text-primary" /> : <Menu className="w-5 h-5 text-primary" />}
         </button>
       </div>
 
