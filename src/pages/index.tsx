@@ -8,7 +8,7 @@ import UseCases from '@/components/sections/UseCases'
 import TechStack from '@/components/sections/TechStack'
 import Comparison from '@/components/sections/Comparison'
 import FAQ from '@/components/sections/FAQ'
-import CTA from '@/components/sections/CTA'
+import Contact from '@/components/sections/Contact'
 
 export default function Home() {
   return (
@@ -28,7 +28,7 @@ export default function Home() {
         
         {/* Open Graph / Facebook */}
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://f2g-solutions.com/" />
+        <meta property="og:url" content="http://www.f2gsolutions.com/" />
         <meta property="og:title" content="ECA - Extended Cellular Analyzer | F2G-SOLUTIONS" />
         <meta
           property="og:description"
@@ -38,7 +38,7 @@ export default function Home() {
 
         {/* Twitter */}
         <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:url" content="https://f2g-solutions.com/" />
+        <meta property="twitter:url" content="http://www.f2gsolutions.com/" />
         <meta property="twitter:title" content="ECA - Extended Cellular Analyzer | F2G-SOLUTIONS" />
         <meta
           property="twitter:description"
@@ -63,7 +63,7 @@ export default function Home() {
           <TechStack />
           <Comparison />
           <FAQ />
-          <CTA />
+          <Contact />
         </main>
 
         <Footer />

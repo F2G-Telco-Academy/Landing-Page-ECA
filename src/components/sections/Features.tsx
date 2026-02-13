@@ -24,7 +24,7 @@ const features = [
   },
   {
     icon: BarChart3,
-    title: '90+ KPI Metrics',
+    title: '50+ KPI Metrics',
     description: 'Comprehensive KPI extraction: RRC success rates, handover stats, attach/detach events, throughput, and more.',
     color: 'text-purple-600',
     bgColor: 'bg-purple-50',
@@ -96,7 +96,7 @@ const features = [
 
 export default function Features() {
   return (
-    <section id="features" className="py-24 bg-gray-50 dark:bg-gray-800">
+    <section id="features" className="py-24 bg-gray-50 dark:bg-gray-800 border-t border-gray-200 dark:border-gray-800">
       <Container>
         {/* Section header */}
         <div className="text-center mb-16 space-y-4">
