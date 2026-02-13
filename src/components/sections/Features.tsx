@@ -5,74 +5,25 @@ import {
 import Container from '../ui/Container'
 
 const features = [
-  {
-    icon: Radio,
-    title: 'Real-time Capture',
-    description: 'Live monitoring from Android devices via ADB or Qualcomm DIAG ports.',
-  },
-  {
-    icon: Map,
-    title: 'GPS Drive Testing',
-    description: 'Interactive maps with real-time GPS tracking and signal heatmaps.',
-  },
-  {
-    icon: BarChart3,
-    title: '65+ KPI Metrics',
-    description: 'RRC success rates, handover stats, attach/detach events, throughput, and more.',
-  },
-  {
-    icon: Wifi,
-    title: 'Multi-Technology',
-    description: 'Full protocol support for 5G NR, LTE, WCDMA, and GSM with L3 decoding.',
-  },
-  {
-    icon: Activity,
-    title: 'Live RF Measurements',
-    description: 'Real-time RSRP, RSRQ, SINR, PCI tracking with historical trends.',
-  },
-  {
-    icon: Zap,
-    title: 'Anomaly Detection',
-    description: 'Automated detection of connection failures, handover issues, and RLF events.',
-  },
-  {
-    icon: FileText,
-    title: 'PCAP Post-Processing',
-    description: 'Analyze offline PCAP files, SCAT logs, and Qualcomm DM traces.',
-  },
-  {
-    icon: Globe,
-    title: 'Advanced Visualization',
-    description: 'Time-series charts, protocol stack viewer, and signaling message browser.',
-  },
-  {
-    icon: Database,
-    title: 'Session Management',
-    description: 'Organize capture sessions, compare devices, export to CSV/Excel.',
-  },
-  {
-    icon: Smartphone,
-    title: 'Multi-Device Support',
-    description: 'Connect up to 4 devices simultaneously for parallel drive testing.',
-  },
-  {
-    icon: LineChart,
-    title: 'Benchmarking Tools',
-    description: 'Compare performance across sessions, operators, and locations.',
-  },
-  {
-    icon: Lock,
-    title: 'Enterprise Security',
-    description: 'Desktop application with enterprise-grade security. Your data stays local.',
-  },
+  { icon: Radio, title: 'Real-time Capture', description: 'Live monitoring from Android devices via ADB or Qualcomm DIAG ports.' },
+  { icon: Map, title: 'GPS Drive Testing', description: 'Interactive maps with real-time GPS tracking and signal heatmaps.' },
+  { icon: BarChart3, title: '65+ KPI Metrics', description: 'RRC success rates, handover stats, attach/detach events, throughput, and more.' },
+  { icon: Wifi, title: 'Multi-Technology', description: 'Full protocol support for 5G NR, LTE, WCDMA, and GSM with L3 decoding.' },
+  { icon: Activity, title: 'Live RF Measurements', description: 'Real-time RSRP, RSRQ, SINR, PCI tracking with historical trends.' },
+  { icon: Zap, title: 'Anomaly Detection', description: 'Automated detection of connection failures, handover issues, and RLF events.' },
+  { icon: FileText, title: 'PCAP Post-Processing', description: 'Analyze offline PCAP files, SCAT logs, and Qualcomm DM traces.' },
+  { icon: Globe, title: 'Advanced Visualization', description: 'Time-series charts, protocol stack viewer, and signaling message browser.' },
+  { icon: Database, title: 'Session Management', description: 'Organize capture sessions, compare devices, export to CSV/Excel.' },
+  { icon: Smartphone, title: 'Multi-Device Support', description: 'Connect up to 4 devices simultaneously for parallel drive testing.' },
+  { icon: LineChart, title: 'Benchmarking Tools', description: 'Compare performance across sessions, operators, and locations.' },
+  { icon: Lock, title: 'Enterprise Security', description: 'Desktop application with enterprise-grade security. Your data stays local.' },
 ]
 
 export default function Features() {
   return (
     <section id="features" className="py-24">
       <Container>
-        {/* Section header */}
-        <div className="text-center mb-16 space-y-4">
+        <div className="reveal text-center mb-16 space-y-4">
           <p className="section-label">Features & Benefits</p>
           <h2 className="heading-lg max-w-2xl mx-auto">
             Everything you need for professional network analysis
@@ -83,21 +34,16 @@ export default function Features() {
           </p>
         </div>
 
-        {/* 3-col grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3">
+        <div className="reveal-children grid md:grid-cols-2 lg:grid-cols-3">
           {features.map((feature, idx) => (
             <div
               key={idx}
-              className="p-5 flex flex-col justify-end gap-3 h-[220px] border border-card-border/50 hover:bg-gray-50/50 transition-colors"
+              className="p-5 flex flex-col justify-end gap-3 h-[220px] border border-card-border/50 hover:bg-white/60 transition-all duration-300"
             >
               <feature.icon className="w-5 h-5 text-accent" />
               <div>
-                <h3 className="text-[15px] font-medium text-primary tracking-heading-sm">
-                  {feature.title}
-                </h3>
-                <p className="text-xs text-muted mt-1 leading-relaxed">
-                  {feature.description}
-                </p>
+                <h3 className="text-[15px] font-medium text-primary tracking-heading-sm">{feature.title}</h3>
+                <p className="text-xs text-muted mt-1 leading-relaxed">{feature.description}</p>
               </div>
             </div>
           ))}

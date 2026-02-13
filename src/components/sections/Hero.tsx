@@ -13,8 +13,7 @@ export default function Hero() {
   return (
     <section className="pt-28 pb-20">
       <Container>
-        {/* Top — Content centered */}
-        <div className="max-w-[900px] mx-auto text-center space-y-6">
+        <div className="reveal max-w-[900px] mx-auto text-center space-y-6">
           <h1 className="heading-xl">
             <span className="text-hero-faded">Professional Cellular</span>{' '}
             Network Analysis Made Simple
@@ -36,14 +35,10 @@ export default function Hero() {
           </div>
         </div>
 
-        {/* Product screenshot — full width with perspective */}
-        <div className="mt-16" style={{ perspective: '2000px' }}>
+        <div className="reveal mt-16" style={{ perspective: '2000px' }}>
           <div
             className="rounded-2xl overflow-hidden border border-card-border shadow-2xl"
-            style={{
-              transform: 'rotateX(4deg)',
-              transformOrigin: 'center bottom',
-            }}
+            style={{ transform: 'rotateX(4deg)', transformOrigin: 'center bottom' }}
           >
             <Image
               src="/ECA Interface Preview.jpeg"
@@ -56,8 +51,7 @@ export default function Hero() {
           </div>
         </div>
 
-        {/* Stats */}
-        <div className="flex justify-center gap-12 mt-14">
+        <div className="reveal flex justify-center gap-12 mt-14">
           <div className="text-center">
             <div className="text-2xl font-medium tracking-heading-lg text-primary">65+</div>
             <div className="text-xs text-muted mt-1">KPIs Tracked</div>

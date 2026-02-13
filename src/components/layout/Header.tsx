@@ -31,7 +31,7 @@ export default function Header() {
           'flex items-center justify-between w-full max-w-[1100px] h-[56px] px-4 rounded-full transition-all duration-300',
           isScrolled
             ? 'bg-white/80 backdrop-blur-md shadow-sm border border-card-border'
-            : 'bg-gradient-to-b from-white to-nav-gradient-end border border-card-border'
+            : 'bg-white/60 backdrop-blur-sm border border-card-border/60'
         )}
       >
         {/* Logo — square with slight rounding, not circle */}

@@ -8,8 +8,11 @@ import UseCases from '@/components/sections/UseCases'
 import TechStack from '@/components/sections/TechStack'
 import FAQ from '@/components/sections/FAQ'
 import Contact from '@/components/sections/Contact'
+import { useReveal } from '@/lib/useReveal'
 
 export default function Home() {
+  useReveal()
+
   return (
     <>
       <Head>
@@ -22,7 +25,7 @@ export default function Home() {
         <link rel="icon" type="image/png" href="/f2g_logo.png" />
       </Head>
 
-      <div className="min-h-screen flex flex-col bg-white">
+      <div className="min-h-screen flex flex-col">
         <Header />
         <main className="flex-1">
           <Hero />
