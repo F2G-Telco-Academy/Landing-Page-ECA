@@ -5,7 +5,8 @@ export default function Document() {
     <Html lang="en">
       <Head>
         <meta charSet="utf-8" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/f2g_logo.png" />
+        <link rel="apple-touch-icon" href="/f2g_logo.png" />
         <meta name="theme-color" content="#1e40af" />
       </Head>
       <body>

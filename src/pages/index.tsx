@@ -47,9 +47,9 @@ export default function Home() {
         <meta property="twitter:image" content="/og-image.png" />
 
         {/* Favicon */}
-        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/f2g_logo.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/f2g_logo.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/f2g_logo.png" />
       </Head>
 
       <div className="min-h-screen flex flex-col">

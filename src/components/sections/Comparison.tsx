@@ -13,7 +13,6 @@ const features = [
   { name: 'Professional support', eca: true, qxdm: true, xcal: true },
   { name: 'Enterprise features', eca: true, qxdm: true, xcal: true },
   { name: 'Windows support', eca: true, qxdm: true, xcal: true },
-  { name: 'Customizable dashboards', eca: true, qxdm: false, xcal: false },
 ]
 
 export default function Comparison() {

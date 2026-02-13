@@ -1,6 +1,7 @@
 'use client'
 
 import { PlayCircle } from 'lucide-react'
+import Image from 'next/image'
 import Button from '../ui/Button'
 import Container from '../ui/Container'
 
@@ -23,7 +24,7 @@ export default function Hero() {
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary-400 opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-primary-500"></span>
               </span>
-              v2.1.0 - Production Ready
+              v1.0.0 - Production Ready
             </div>
 
             {/* Main heading */}
@@ -90,10 +91,13 @@ export default function Hero() {
           <div className="relative animate-fade-in">
             {/* Main screenshot with shadow and border */}
             <div className="relative rounded-2xl overflow-hidden shadow-2xl border-8 border-white dark:border-gray-800 bg-white dark:bg-gray-800">
-              <img 
+              <Image 
                 src="/ECA Interface Preview.jpeg" 
                 alt="ECA Interface Preview - Real-time cellular analysis dashboard"
+                width={1920}
+                height={1080}
                 className="w-full h-full object-cover"
+                priority
               />
             </div>
 
