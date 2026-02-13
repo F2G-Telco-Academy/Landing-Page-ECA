@@ -36,7 +36,7 @@ export default function Footer() {
           <div className="col-span-2 md:col-span-1">
             <div className="flex items-center gap-2.5 mb-4">
               <div className="w-7 h-7">
-                <Image src="/f2g_logo.png" alt="F2G Logo" width={32} height={32} className="object-contain" />
+                <Image src="/f2g_logo.png" alt="F2G" width={28} height={28} className="rounded-md" />
               </div>
               <span className="font-medium text-sm">ECA</span>
             </div>
