@@ -1,6 +1,7 @@
 'use client'
 
 import { Twitter, Mail, Heart, Linkedin } from 'lucide-react'
+import Image from 'next/image'
 import Container from '../ui/Container'
 
 const footerLinks = {
@@ -118,8 +119,8 @@ export default function Footer() {
         <div className="py-6 border-t border-gray-800 flex flex-col md:flex-row items-center justify-between gap-4">
           {/* Logo & Copyright */}
           <div className="flex items-center gap-3">
-            <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-primary-600 to-blue-600 flex items-center justify-center text-white font-bold">
-              📡
+            <div className="w-8 h-8 rounded-lg bg-gradient-to-br flex items-center justify-center overflow-hidden">
+              <Image src="/f2g_logo.png" alt="F2G Logo" width={32} height={32} className="object-contain" />
             </div>
             <div className="text-sm text-gray-400">
               © {currentYear} F2G-SOLUTIONS. All rights reserved.

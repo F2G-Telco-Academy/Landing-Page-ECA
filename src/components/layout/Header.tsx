@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import { Menu, X } from 'lucide-react'
+import Image from 'next/image'
 import { cn } from '@/lib/utils'
 import ThemeToggle from '../ui/ThemeToggle'
 
@@ -37,8 +38,8 @@ export default function Header() {
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
           <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-primary-600 to-blue-600 flex items-center justify-center text-white font-bold text-xl">
-              📡
+            <div className="w-10 h-10 rounded-lg bg-gradient-to-br flex items-center justify-center overflow-hidden">
+              <Image src="/f2g_logo.png" alt="F2G Logo" width={40} height={40} className="object-contain" />
             </div>
             <div>
               <div className="font-bold text-xl text-gray-900 dark:text-white">ECA</div>
