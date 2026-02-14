@@ -1,111 +1,46 @@
-'use client'
-
 import { Users, Building2, GraduationCap, Wrench } from 'lucide-react'
 import Container from '../ui/Container'
-import Card from '../ui/Card'
 
 const useCases = [
-  {
-    icon: Users,
-    title: 'RF Engineers',
-    description: 'Drive testing, coverage mapping, and KPI monitoring for network optimization projects.',
-    features: [
-      'Real-time signal quality tracking',
-      'Handover performance analysis',
-      'Coverage gap identification',
-      'Multi-operator benchmarking',
-    ],
-    color: 'text-blue-600',
-    bgColor: 'bg-blue-50',
-  },
-  {
-    icon: Building2,
-    title: 'Telecom Operators',
-    description: 'Network troubleshooting, quality assurance, and performance validation for RAN teams.',
-    features: [
-      'Protocol debugging & analysis',
-      'Call drop investigation',
-      'Attach/detach failure detection',
-      'CSFB scenario monitoring',
-    ],
-    color: 'text-purple-600',
-    bgColor: 'bg-purple-50',
-  },
-  {
-    icon: GraduationCap,
-    title: 'Researchers & Students',
-    description: 'Academic research, protocol learning, and cellular technology education.',
-    features: [
-      'Layer 3 message inspection',
-      '3GPP protocol visualization',
-      'Free alternative to QXDM/Xcal',
-      'Offline PCAP analysis',
-    ],
-    color: 'text-green-600',
-    bgColor: 'bg-green-50',
-  },
-  {
-    icon: Wrench,
-    title: 'Device Developers',
-    description: 'Modem testing, device certification, and cellular stack development.',
-    features: [
-      'Multi-device comparison',
-      'RAT selection analysis',
-      'Bearer establishment tracking',
-      'NAS/RRC message logs',
-    ],
-    color: 'text-orange-600',
-    bgColor: 'bg-orange-50',
-  },
+  { icon: Users, title: 'RF Engineers', description: 'Drive testing, coverage mapping, and KPI monitoring for network optimization projects.', features: ['Real-time signal quality tracking', 'Handover performance analysis', 'Coverage gap identification', 'Multi-operator benchmarking'] },
+  { icon: Building2, title: 'Telecom Operators', description: 'Network troubleshooting, quality assurance, and performance validation for RAN teams.', features: ['Protocol debugging & analysis', 'Call drop investigation', 'Attach/detach failure detection', 'CSFB scenario monitoring'] },
+  { icon: GraduationCap, title: 'Researchers & Students', description: 'Academic research, protocol learning, and cellular technology education.', features: ['Layer 3 message inspection', '3GPP protocol visualization', 'Offline PCAP analysis', 'Multi-technology support'] },
+  { icon: Wrench, title: 'Device Developers', description: 'Modem testing, device certification, and cellular stack development.', features: ['Multi-device comparison', 'RAT selection analysis', 'Bearer establishment tracking', 'NAS/RRC message logs'] },
 ]
 
 export default function UseCases() {
   return (
-    <section id="use-cases" className="py-24 bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-800">
+    <section id="use-cases" className="py-24">
       <Container>
-        {/* Section header */}
-        <div className="text-center mb-16 space-y-4">
-          <h2 className="text-4xl lg:text-5xl font-bold">
-            Built for
-            <span className="gradient-text block mt-2">Telecom Professionals</span>
-          </h2>
-          <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-            Whether you&apos;re optimizing networks, researching protocols, or developing devices, 
-            ECA adapts to your workflow.
+        <div className="reveal text-center mb-16 space-y-4">
+          <p className="section-label">Use Cases</p>
+          <h2 className="heading-lg">Built for telecom professionals</h2>
+          <p className="text-body max-w-xl mx-auto">
+            Whether you&apos;re optimizing networks, researching protocols, or developing devices, ECA adapts to your workflow.
           </p>
         </div>
 
-        {/* Use cases grid */}
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="reveal-children grid md:grid-cols-2 gap-5">
           {useCases.map((useCase, idx) => (
-            <Card key={idx} hover className="group">
-              <div className="space-y-6">
-                {/* Icon & Title */}
-                <div className="flex items-start gap-4">
-                  <div className={`w-12 h-12 rounded-lg ${useCase.bgColor} flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300`}>
-                    <useCase.icon className={`w-6 h-6 ${useCase.color}`} />
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
-                      {useCase.title}
-                    </h3>
-                    <p className="text-gray-600 dark:text-gray-300 text-sm">
-                      {useCase.description}
-                    </p>
-                  </div>
+            <div key={idx} className="bg-white/70 backdrop-blur-sm rounded-xl border border-card-border p-6 space-y-4 hover:bg-white hover:shadow-md transition-all duration-300">
+              <div className="flex items-start gap-4">
+                <div className="w-10 h-10 rounded-lg bg-white flex items-center justify-center flex-shrink-0 border border-card-border">
+                  <useCase.icon className="w-5 h-5 text-accent" />
                 </div>
-
-                {/* Features list */}
-                <ul className="space-y-2 pl-16">
-                  {useCase.features.map((feature, featureIdx) => (
-                    <li key={featureIdx} className="flex items-start gap-2 text-sm text-gray-700 dark:text-gray-300">
-                      <span className={`mt-1.5 w-1.5 h-1.5 rounded-full ${useCase.color.replace('text', 'bg')} flex-shrink-0`} />
-                      <span>{feature}</span>
-                    </li>
-                  ))}
-                </ul>
+                <div>
+                  <h3 className="text-[15px] font-medium text-primary tracking-heading-sm">{useCase.title}</h3>
+                  <p className="text-xs text-muted mt-1">{useCase.description}</p>
+                </div>
               </div>
-            </Card>
+              <ul className="space-y-2 pl-14">
+                {useCase.features.map((feature, fIdx) => (
+                  <li key={fIdx} className="flex items-center gap-2 text-xs text-muted">
+                    <span className="w-1 h-1 rounded-full bg-accent flex-shrink-0" />
+                    {feature}
+                  </li>
+                ))}
+              </ul>
+            </div>
           ))}
         </div>
       </Container>
