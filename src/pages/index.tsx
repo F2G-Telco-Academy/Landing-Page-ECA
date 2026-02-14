@@ -6,11 +6,13 @@ import Features from '@/components/sections/Features'
 import HowItWorks from '@/components/sections/HowItWorks'
 import UseCases from '@/components/sections/UseCases'
 import TechStack from '@/components/sections/TechStack'
-import Comparison from '@/components/sections/Comparison'
 import FAQ from '@/components/sections/FAQ'
 import Contact from '@/components/sections/Contact'
+import { useReveal } from '@/lib/useReveal'
 
 export default function Home() {
+  useReveal()
+
   return (
     <>
       <Head>
@@ -19,53 +21,21 @@ export default function Home() {
           name="description"
           content="Professional cellular network analysis tool by F2G-SOLUTIONS. Real-time LTE, 5G NR, WCDMA monitoring with GPS mapping, KPI extraction, and protocol debugging."
         />
-        <meta
-          name="keywords"
-          content="cellular analyzer, network testing, drive testing, 5G analysis, LTE monitoring, RF engineering, network KPI, protocol analyzer, F2G-SOLUTIONS"
-        />
-        <meta name="author" content="F2G-SOLUTIONS" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        
-        {/* Open Graph / Facebook */}
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="http://www.f2gsolutions.com/" />
-        <meta property="og:title" content="ECA - Extended Cellular Analyzer | F2G-SOLUTIONS" />
-        <meta
-          property="og:description"
-          content="Professional cellular network analysis tool by F2G-SOLUTIONS. Real-time monitoring, GPS mapping, and 90+ KPIs."
-        />
-        <meta property="og:image" content="/og-image.png" />
-
-        {/* Twitter */}
-        <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:url" content="http://www.f2gsolutions.com/" />
-        <meta property="twitter:title" content="ECA - Extended Cellular Analyzer | F2G-SOLUTIONS" />
-        <meta
-          property="twitter:description"
-          content="Professional cellular network analysis tool by F2G-SOLUTIONS."
-        />
-        <meta property="twitter:image" content="/og-image.png" />
-
-        {/* Favicon */}
-        <link rel="apple-touch-icon" sizes="180x180" href="/f2g_logo.png" />
-        <link rel="icon" type="image/png" sizes="32x32" href="/f2g_logo.png" />
-        <link rel="icon" type="image/png" sizes="16x16" href="/f2g_logo.png" />
+        <link rel="icon" type="image/png" href="/f2g_logo.png" />
       </Head>
 
       <div className="min-h-screen flex flex-col">
         <Header />
-        
         <main className="flex-1">
           <Hero />
           <Features />
           <HowItWorks />
           <UseCases />
           <TechStack />
-          <Comparison />
           <FAQ />
           <Contact />
         </main>
-
         <Footer />
       </div>
     </>
