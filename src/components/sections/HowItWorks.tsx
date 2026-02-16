@@ -10,32 +10,32 @@ const steps = [
 
 export default function HowItWorks() {
   return (
-    <section id="how-it-works" className="py-24">
+    <section id="how-it-works" className="py-12 md:py-16">
       <Container>
-        <div className="reveal text-center mb-16 space-y-4">
+        <div className="reveal text-center mb-10 md:mb-12 space-y-4">
           <p className="section-label">How It Works</p>
-          <h2 className="heading-lg">Get started in four simple steps</h2>
-          <p className="text-body max-w-xl mx-auto">
+          <h2 className="heading-lg dark:text-gray-100">Get started in four simple steps</h2>
+          <p className="text-body dark:text-gray-300 max-w-xl mx-auto">
             From installation to analysis — ECA is designed for quick setup and intuitive workflow.
           </p>
         </div>
 
         <div className="reveal-children grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           {steps.map((step, idx) => (
-            <div key={idx} className="bg-white/70 backdrop-blur-sm rounded-xl border border-card-border p-6 space-y-4 hover:bg-white hover:shadow-md transition-all duration-300">
+            <div key={idx} className="bg-white/70 dark:bg-gray-800/70 backdrop-blur-sm rounded-xl border border-card-border dark:border-gray-700 p-6 space-y-4 hover:bg-white dark:hover:bg-gray-800 hover:shadow-md transition-all duration-300">
               <div className="flex items-center justify-between">
-                <span className="text-xs font-medium text-accent">{step.number}</span>
-                <step.icon className="w-5 h-5 text-primary/20" />
+                <span className="text-xs font-medium text-accent dark:text-[#8BADB9]">{step.number}</span>
+                <step.icon className="w-5 h-5 text-primary/20 dark:text-gray-600" />
               </div>
               <div>
-                <h3 className="text-[15px] font-medium text-primary tracking-heading-sm">{step.title}</h3>
-                <p className="text-xs text-muted mt-2 leading-relaxed">{step.description}</p>
+                <h3 className="text-[15px] font-medium text-primary dark:text-gray-100 tracking-heading-sm">{step.title}</h3>
+                <p className="text-xs text-muted dark:text-gray-400 mt-2 leading-relaxed">{step.description}</p>
               </div>
             </div>
           ))}
         </div>
 
-        <p className="reveal text-center text-xs text-muted mt-10">Average setup time: less than 5 minutes</p>
+        <p className="reveal text-center text-xs text-muted dark:text-gray-400 mt-10">Average setup time: less than 5 minutes</p>
       </Container>
     </section>
   )
