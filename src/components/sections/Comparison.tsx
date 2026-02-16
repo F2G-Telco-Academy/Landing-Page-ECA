@@ -9,7 +9,7 @@ const features = [
   { name: 'Real-time capture', eca: true, qxdm: true, xcal: true },
   { name: 'GPS mapping', eca: true, qxdm: false, xcal: true },
   { name: 'PCAP export', eca: true, qxdm: true, xcal: false },
-  { name: 'Multi-device support', eca: true, qxdm: false, xcal: false },
+  { name: 'Multi-device support', eca: false, qxdm: false, xcal: false },
   { name: 'Offline analysis', eca: true, qxdm: true, xcal: true },
   { name: '5G NR support', eca: true, qxdm: true, xcal: true },
   { name: 'Professional support', eca: true, qxdm: true, xcal: true },

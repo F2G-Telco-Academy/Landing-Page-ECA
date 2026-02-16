@@ -5,7 +5,6 @@ import Hero from '@/components/sections/Hero'
 import Features from '@/components/sections/Features'
 import HowItWorks from '@/components/sections/HowItWorks'
 import UseCases from '@/components/sections/UseCases'
-import TechStack from '@/components/sections/TechStack'
 import FAQ from '@/components/sections/FAQ'
 import Contact from '@/components/sections/Contact'
 import { useReveal } from '@/lib/useReveal'
@@ -32,7 +31,6 @@ export default function Home() {
           <Features />
           <HowItWorks />
           <UseCases />
-          <TechStack />
           <FAQ />
           <Contact />
         </main>
