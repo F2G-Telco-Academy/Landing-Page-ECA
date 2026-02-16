@@ -11,15 +11,14 @@ export default function Hero() {
   const [isVideoOpen, setIsVideoOpen] = useState(false)
 
   return (
-    <section className="pt-28 pb-20">
+    <section className="pt-28 pb-12 md:pb-16">
       <Container>
         <div className="reveal max-w-[900px] mx-auto text-center space-y-6">
           <h1 className="heading-xl">
-            <span className="text-hero-faded">Professional Cellular</span>{' '}
-            Network Analysis Made Simple
+            Professional Cellular Network Analysis Made Simple
           </h1>
 
-          <p className="text-body max-w-2xl mx-auto">
+          <p className="text-body dark:text-gray-300 max-w-2xl mx-auto">
             Real-time LTE, 5G NR, WCDMA, and GSM monitoring. Drive testing,
             KPI extraction, and protocol debugging — powered by F2G-SOLUTIONS.
           </p>
@@ -37,11 +36,11 @@ export default function Hero() {
 
         <div className="reveal mt-16" style={{ perspective: '2000px' }}>
           <div
-            className="rounded-2xl overflow-hidden border border-card-border shadow-2xl"
+            className="rounded-2xl overflow-hidden border border-card-border dark:border-gray-700 shadow-2xl"
             style={{ transform: 'rotateX(4deg)', transformOrigin: 'center bottom' }}
           >
             <Image
-              src="/ECA Interface Preview.jpeg"
+              src="/ECA_interface_preview.png"
               alt="ECA Interface — Real-time cellular analysis dashboard"
               width={1920}
               height={1080}
@@ -53,16 +52,16 @@ export default function Hero() {
 
         <div className="reveal flex justify-center gap-12 mt-14">
           <div className="text-center">
-            <div className="text-2xl font-medium tracking-heading-lg text-primary">65+</div>
-            <div className="text-xs text-muted mt-1">KPIs Tracked</div>
+            <div className="text-2xl font-medium tracking-heading-lg text-primary dark:text-gray-100">65+</div>
+            <div className="text-xs text-muted dark:text-gray-400 mt-1">KPIs Tracked</div>
           </div>
           <div className="text-center">
-            <div className="text-2xl font-medium tracking-heading-lg text-primary">4</div>
-            <div className="text-xs text-muted mt-1">Technologies</div>
+            <div className="text-2xl font-medium tracking-heading-lg text-primary dark:text-gray-100">4</div>
+            <div className="text-xs text-muted dark:text-gray-400 mt-1">Technologies</div>
           </div>
           <div className="text-center">
-            <div className="text-2xl font-medium tracking-heading-lg text-primary">Real-Time</div>
-            <div className="text-xs text-muted mt-1">Monitoring</div>
+            <div className="text-2xl font-medium tracking-heading-lg text-primary dark:text-gray-100">Real-Time</div>
+            <div className="text-xs text-muted dark:text-gray-400 mt-1">Monitoring</div>
           </div>
         </div>
       </Container>

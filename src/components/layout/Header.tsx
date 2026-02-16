@@ -1,7 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import { Menu, X } from 'lucide-react'
+import { Menu, X, Moon, Sun } from 'lucide-react'
 import Image from 'next/image'
 import { cn } from '@/lib/utils'
 import Button from '../ui/Button'
@@ -17,6 +17,7 @@ const navigation = [
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+  const [isDark, setIsDark] = useState(false)
 
   useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 20)
@@ -24,55 +25,82 @@ export default function Header() {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
+  useEffect(() => {
+    const stored = localStorage.getItem('theme')
+    const shouldBeDark = stored === 'dark'
+    setIsDark(shouldBeDark)
+    document.documentElement.classList.toggle('dark', shouldBeDark)
+    document.body.classList.toggle('dark', shouldBeDark)
+  }, [])
+
+  const toggleTheme = () => {
+    const newTheme = !isDark
+    setIsDark(newTheme)
+    localStorage.setItem('theme', newTheme ? 'dark' : 'light')
+    document.documentElement.classList.toggle('dark', newTheme)
+    document.body.classList.toggle('dark', newTheme)
+  }
+
   return (
     <header className="fixed top-0 left-0 right-0 z-50 flex justify-center px-4 pt-4">
       <div
         className={cn(
           'flex items-center justify-between w-full max-w-[1100px] h-[56px] px-4 rounded-full transition-all duration-300',
           isScrolled
-            ? 'bg-white/80 backdrop-blur-md shadow-sm border border-card-border'
-            : 'bg-white/60 backdrop-blur-sm border border-card-border/60'
+            ? 'bg-white/80 dark:bg-gray-900/80 backdrop-blur-md shadow-sm border border-card-border dark:border-gray-700'
+            : 'bg-white/60 dark:bg-gray-900/60 backdrop-blur-sm border border-card-border/60 dark:border-gray-700/60'
         )}
       >
-        {/* Logo — square with slight rounding, not circle */}
         <div className="flex items-center gap-2.5">
           <Image src="/f2g_logo.png" alt="F2G" width={28} height={28} className="rounded-md" />
-          <span className="font-medium text-sm text-primary tracking-tight">ECA</span>
+          <span className="font-medium text-sm text-primary dark:text-gray-100 tracking-tight">ECA</span>
         </div>
 
-        {/* Desktop Nav */}
         <nav className="hidden lg:flex items-center gap-6">
           {navigation.map((item) => (
             <a
               key={item.name}
               href={item.href}
-              className="text-sm text-primary/70 hover:text-primary tracking-nav transition-colors"
+              className="text-sm text-primary/70 dark:text-gray-300 hover:text-primary dark:hover:text-white tracking-nav transition-colors"
             >
               {item.name}
             </a>
           ))}
         </nav>
 
-        {/* Desktop CTA */}
-        <div className="hidden lg:block">
+        <div className="hidden lg:flex items-center gap-3">
+          <button
+            onClick={toggleTheme}
+            className="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
+            aria-label="Toggle theme"
+          >
+            {isDark ? <Sun className="w-4 h-4 text-gray-300" /> : <Moon className="w-4 h-4 text-primary" />}
+          </button>
           <Button size="sm" onClick={() => window.location.href = '#contact'}>
             Get Started
           </Button>
         </div>
 
-        {/* Mobile menu button */}
-        <button
-          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-          className="lg:hidden p-2 rounded-full hover:bg-gray-100 transition-colors"
-        >
-          {isMobileMenuOpen ? <X className="w-5 h-5 text-primary" /> : <Menu className="w-5 h-5 text-primary" />}
-        </button>
+        <div className="lg:hidden flex items-center gap-2">
+          <button
+            onClick={toggleTheme}
+            className="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
+            aria-label="Toggle theme"
+          >
+            {isDark ? <Sun className="w-4 h-4 text-gray-300" /> : <Moon className="w-4 h-4 text-primary" />}
+          </button>
+          <button
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            className="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
+          >
+            {isMobileMenuOpen ? <X className="w-5 h-5 text-primary dark:text-gray-100" /> : <Menu className="w-5 h-5 text-primary dark:text-gray-100" />}
+          </button>
+        </div>
       </div>
 
-      {/* Mobile Nav */}
       <div
         className={cn(
-          'lg:hidden absolute top-[72px] left-4 right-4 bg-white rounded-2xl border border-card-border shadow-lg transition-all duration-300 overflow-hidden',
+          'lg:hidden absolute top-[72px] left-4 right-4 bg-white dark:bg-gray-900 rounded-2xl border border-card-border dark:border-gray-700 shadow-lg transition-all duration-300 overflow-hidden',
           isMobileMenuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
         )}
       >
@@ -82,7 +110,7 @@ export default function Header() {
               key={item.name}
               href={item.href}
               onClick={() => setIsMobileMenuOpen(false)}
-              className="block px-4 py-3 rounded-lg text-sm text-primary/70 hover:text-primary hover:bg-gray-50 transition-colors"
+              className="block px-4 py-3 rounded-lg text-sm text-primary/70 dark:text-gray-300 hover:text-primary dark:hover:text-white hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors"
             >
               {item.name}
             </a>

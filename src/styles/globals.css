@@ -13,10 +13,15 @@ html {
 }
 
 body {
-  @apply text-primary;
+  @apply text-primary dark:text-gray-100;
   background: linear-gradient(180deg, #F8F8F6 0%, #F2F1EF 40%, #EEECEA 100%);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.dark {
+  background: linear-gradient(180deg, #0F0F11 0%, #1A1A1C 40%, #1E1E20 100%);
 }
 
 /* Section label style */
@@ -29,19 +34,19 @@ body {
 }
 
 .heading-xl {
-  @apply text-5xl md:text-6xl lg:text-[78px] font-normal leading-[1] tracking-heading-xl text-primary;
+  @apply text-5xl md:text-6xl lg:text-[78px] font-normal leading-[1] tracking-heading-xl text-primary dark:text-gray-100;
 }
 
 .heading-lg {
-  @apply text-3xl md:text-[32px] font-medium leading-[1.2] tracking-heading-lg text-primary;
+  @apply text-3xl md:text-[32px] font-medium leading-[1.2] tracking-heading-lg text-primary dark:text-gray-100;
 }
 
 .heading-md {
-  @apply text-2xl md:text-[28px] font-medium leading-[1.2] tracking-heading-md text-primary;
+  @apply text-2xl md:text-[28px] font-medium leading-[1.2] tracking-heading-md text-primary dark:text-gray-100;
 }
 
 .heading-sm {
-  @apply text-lg font-medium leading-[1.2] tracking-heading-sm text-primary;
+  @apply text-lg font-medium leading-[1.2] tracking-heading-sm text-primary dark:text-gray-100;
 }
 
 /* Scroll reveal animations */

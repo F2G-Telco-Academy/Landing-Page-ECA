@@ -34,11 +34,9 @@ npm run export
 2. **Features** - 12 key features with icons
 3. **How It Works** - 4-step process guide
 4. **Use Cases** - Target personas and workflows
-5. **Tech Stack** - Technology overview
-6. **Comparison** - ECA vs competitors
-7. **FAQ** - Common questions
-8. **CTA** - Final conversion section
-9. **Footer** - Links and legal
+5. **FAQ** - Common questions
+6. **CTA** - Final conversion section
+7. **Footer** - Links and legal
 
 ## 🎯 Key Highlights
 
