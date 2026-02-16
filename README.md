@@ -30,7 +30,7 @@ npm run export
 
 ## 🎨 Sections
 
-1. **Hero** - Main value proposition with CTA
+1. **Hero** - Main value proposition with CTA and auto-rotating image showcase (14 images, 2s interval)
 2. **Features** - 12 key features with icons
 3. **How It Works** - 4-step process guide
 4. **Use Cases** - Target personas and workflows
@@ -41,6 +41,7 @@ npm run export
 ## 🎯 Key Highlights
 
 - Professional design matching F2G-SOLUTIONS brand
+- Auto-rotating image showcase (14 ECA interface screenshots)
 - Conversion-optimized CTAs
 - Trust signals and social proof
 - Mobile-responsive navigation
