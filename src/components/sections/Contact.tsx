@@ -23,12 +23,12 @@ export default function Contact() {
               <PlayCircle className="w-4 h-4" />
               Watch Demo
             </Button>
-            <Button size="lg" variant="outline" onClick={() => window.location.href = 'mailto:contact@f2g-solutions.com'} className="gap-2">
+            <Button size="lg" variant="outline" onClick={() => window.location.href = 'http://www.f2gsolutions.com/'} className="gap-2">
               <Mail className="w-4 h-4" />
               Contact Us
             </Button>
           </div>
-          <p className="text-xs text-muted dark:text-gray-400 pt-4">Requires Windows 10/11 · Python 3.11+ · TShark/Wireshark · 8GB RAM minimum</p>
+          <p className="text-xs text-muted dark:text-gray-400 pt-4">Requires Windows 10/11 · Python 3.11+ · TShark/Wireshark · 16GB RAM minimum</p>
         </div>
       </Container>
       <VideoModal isOpen={isVideoOpen} onClose={() => setIsVideoOpen(false)} />
