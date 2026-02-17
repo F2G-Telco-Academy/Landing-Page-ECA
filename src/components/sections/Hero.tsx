@@ -10,15 +10,10 @@ import VideoModal from '../ui/VideoModal'
 const showcaseImages = [
   { src: '/ECA_interface_preview.png', alt: 'ECA Interface — Real-time cellular analysis dashboard' },
   { src: '/live_signaling.png', alt: 'Live signaling messages and protocol analysis' },
-  { src: '/map_live_report.png', alt: 'GPS mapping with live network reports' },
   { src: '/lte_status_info.png', alt: 'LTE status and connection information' },
   { src: '/post_process_map.png', alt: 'Post-processing map analysis' },
-  { src: '/post_process_map_live.png', alt: 'Live post-processing map view' },
   { src: '/post_process_map_report.png', alt: 'Detailed map reports and analytics' },
   { src: '/post_process_map_satelite.png', alt: 'Satellite view with network overlay' },
-  { src: '/visualize.png', alt: 'Data visualization and charts' },
-  { src: '/visualize1.png', alt: 'Advanced visualization tools' },
-  { src: '/initial_map.png', alt: 'Initial map setup and configuration' },
   { src: '/convert.png', alt: 'Data conversion and export tools' },
   { src: '/post_process_map_dark.png', alt: 'Dark mode map interface' },
   { src: '/post_process_map_light.png', alt: 'Light mode map interface' },
@@ -75,7 +70,7 @@ export default function Hero() {
 
           <p className="text-body dark:text-gray-300 max-w-2xl mx-auto">
             Real-time LTE, 5G NR, WCDMA, and GSM monitoring. Drive testing,
-            KPI extraction, and protocol debugging — powered by F2G-SOLUTIONS.
+            KPI extraction, and protocol debugging - powered by F2G-SOLUTIONS.
           </p>
 
           <div className="flex flex-wrap gap-3 justify-center pt-2">
@@ -98,7 +93,7 @@ export default function Hero() {
           onTouchEnd={() => setIsPaused(false)}
         >
           <div
-            className="rounded-2xl overflow-hidden border border-card-border dark:border-gray-700 shadow-2xl relative"
+            className="rounded-2xl overflow-hidden border border-card-border dark:border-gray-700 shadow-2xl relative bg-white dark:bg-gray-900"
             style={{ transform: 'rotateX(4deg)', transformOrigin: 'center bottom' }}
           >
             <div className="relative w-full overflow-hidden" style={{ paddingBottom: '56.25%' }}>
@@ -116,7 +111,7 @@ export default function Hero() {
                       src={image.src}
                       alt={image.alt}
                       fill
-                      className="object-cover"
+                      className="object-contain"
                       priority={idx < 3}
                       quality={90}
                     />

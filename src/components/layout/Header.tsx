@@ -18,9 +18,28 @@ export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const [isDark, setIsDark] = useState(false)
+  const [activeSection, setActiveSection] = useState('')
 
   useEffect(() => {
-    const handleScroll = () => setIsScrolled(window.scrollY > 20)
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 20)
+
+      const sections = navigation.map(item => item.href.substring(1))
+      const scrollPosition = window.scrollY + 100
+
+      for (const section of sections) {
+        const element = document.getElementById(section)
+        if (element) {
+          const { offsetTop, offsetHeight } = element
+          if (scrollPosition >= offsetTop && scrollPosition < offsetTop + offsetHeight) {
+            setActiveSection(`#${section}`)
+            break
+          }
+        }
+      }
+    }
+
+    handleScroll()
     window.addEventListener('scroll', handleScroll)
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
@@ -61,7 +80,12 @@ export default function Header() {
             <a
               key={item.name}
               href={item.href}
-              className="text-sm text-primary/70 dark:text-gray-300 hover:text-primary dark:hover:text-white tracking-nav transition-colors"
+              className={cn(
+                'text-sm tracking-nav transition-colors',
+                activeSection === item.href
+                  ? 'text-primary dark:text-white font-semibold'
+                  : 'text-primary/70 dark:text-gray-300 hover:text-primary dark:hover:text-white'
+              )}
             >
               {item.name}
             </a>
@@ -110,7 +134,12 @@ export default function Header() {
               key={item.name}
               href={item.href}
               onClick={() => setIsMobileMenuOpen(false)}
-              className="block px-4 py-3 rounded-lg text-sm text-primary/70 dark:text-gray-300 hover:text-primary dark:hover:text-white hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors"
+              className={cn(
+                'block px-4 py-3 rounded-lg text-sm transition-colors',
+                activeSection === item.href
+                  ? 'text-primary dark:text-white font-semibold bg-gray-50 dark:bg-gray-800'
+                  : 'text-primary/70 dark:text-gray-300 hover:text-primary dark:hover:text-white hover:bg-gray-50 dark:hover:bg-gray-800'
+              )}
             >
               {item.name}
             </a>

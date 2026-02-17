@@ -11,7 +11,7 @@ const faqs = [
   { question: 'What networks does it support?', answer: 'ECA supports 5G NR (SA/NSA), LTE (FDD/TDD), WCDMA/HSPA+, and GSM networks. It decodes Layer 3 RRC and NAS messages for all technologies.' },
   { question: 'Do I need Wireshark installed?', answer: 'Yes, TShark (part of Wireshark) is required for protocol decoding. You also need Npcap for live capture on Windows.' },
   { question: 'Can I use ECA for commercial projects?', answer: 'Yes. ECA is designed for professional and commercial use. Contact F2G-SOLUTIONS for enterprise licensing and support options.' },
-  { question: 'How is data stored?', answer: 'All data is stored locally on your computer in SQLite databases and CSV files. ECA is an offline-first desktop application — no cloud sync, complete privacy.' },
+  { question: 'How is data stored?', answer: 'All data is stored locally on your computer in SQLite databases and CSV files. ECA is an offline-first desktop application no cloud sync, complete privacy.' },
   { question: 'Can I compare multiple devices?', answer: 'Currently, ECA supports 1 device at a time. Multi-device support (up to 4 simultaneous connections) and session comparison tools are planned for future releases.' },
   { question: 'What platforms are supported?', answer: 'Currently optimized for Windows 10/11. Mac and Linux support is planned for future releases.' },
 ]
