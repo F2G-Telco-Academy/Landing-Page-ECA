@@ -28,25 +28,34 @@ npm run build
 npm run export
 ```
 
+## 📥 Downloads
+
+The landing page includes a download button for:
+- **Qualcomm USB Driver** (v1.0.10065.1) - Required for Android device connection
+- Located in Contact section
+- File stored in `public/` directory for proper serving
+
 ## 🎨 Sections
 
-1. **Hero** - Main value proposition with CTA and auto-rotating image showcase (9 images, 2s interval)
+1. **Hero** - Main value proposition with CTA and auto-rotating image showcase (11 images, 2s interval)
 2. **Features** - 12 key features with icons
 3. **How It Works** - 4-step process guide
 4. **Use Cases** - Target personas and workflows
 5. **FAQ** - Common questions
-6. **CTA** - Final conversion section
+6. **Contact** - Final conversion section with Qualcomm USB Driver download
 7. **Footer** - Links and legal
 
 ## 🎯 Key Highlights
 
 - Professional design matching F2G-SOLUTIONS brand
-- Auto-rotating image showcase (14 ECA interface screenshots)
+- Auto-rotating image showcase (11 ECA interface screenshots)
+- Qualcomm USB Driver download button
 - Conversion-optimized CTAs
 - Trust signals and social proof
 - Mobile-responsive navigation
 - Smooth animations and transitions
 - Dark mode support
+- Active section highlighting in navigation
 
 ## 📝 Customization
 
