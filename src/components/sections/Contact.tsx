@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from 'react'
-import { PlayCircle, Mail } from 'lucide-react'
+import { PlayCircle, Mail, Download } from 'lucide-react'
 import Button from '../ui/Button'
 import Container from '../ui/Container'
 import VideoModal from '../ui/VideoModal'
@@ -29,6 +29,20 @@ export default function Contact() {
             </Button>
           </div>
           <p className="text-xs text-muted dark:text-gray-400 pt-4">Requires Windows 10/11 · Python 3.11+ · TShark/Wireshark · 16GB RAM minimum</p>
+          
+          <div className="pt-6 border-t border-card-border dark:border-gray-700">
+            <p className="text-sm text-muted dark:text-gray-400 mb-3">Install USB driver to connect your Android device for live network analysis:</p>
+            <a
+              href="/Qualcomm_USB_Driver_v1.0.10065.1.rar"
+              download="Qualcomm_USB_Driver_v1.0.10065.1.rar"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-white dark:bg-gray-800 border-2 border-card-border dark:border-gray-700 rounded-full text-sm font-medium text-primary dark:text-gray-100 hover:bg-gray-50 dark:hover:bg-gray-700 hover:border-primary dark:hover:border-gray-600 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-primary/20"
+              aria-label="Download Qualcomm USB Driver"
+            >
+              <Download className="w-4 h-4" />
+              Download Qualcomm USB Driver
+            </a>
+            <p className="text-xs text-muted dark:text-gray-400 mt-2">v1.0.10065.1 · RAR Archive · Windows</p>
+          </div>
         </div>
       </Container>
       <VideoModal isOpen={isVideoOpen} onClose={() => setIsVideoOpen(false)} />
